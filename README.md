@@ -3,7 +3,7 @@
 
 ## Project: auth-api
 
-### Author: Student/Group Name
+### Author: Marco Villafana
 
 ### Problem Domain  
 

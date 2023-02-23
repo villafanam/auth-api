@@ -3,11 +3,12 @@
 const express = require('express');
 const cors = require('cors');
 
-const notFoundHandler = require('./error-handlers/404.js');
-const errorHandler = require('./error-handlers/500.js');
-const logger = require('./middleware/logger.js');
+const errorHandler = require('./error-handlers/500');
+const notFound = require('./error-handlers/404');
+const authRoutes = require('./auth/routes');
+const logger = require('./middleware/logger');
 
-const v1Routes = require('./routes/v1.js');
+const v1Routes = require('./routes/v1');
 
 // Prepare the express app
 const app = express();
@@ -32,8 +33,7 @@ app.use('/api/v1', v1Routes);
 app.use(notFound);
 app.use(errorHandler);
 
-app.use('*', notFoundHandler);
-app.use(errorHandler);
+
 
 module.exports = {
   server: app,
