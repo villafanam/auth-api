@@ -2,7 +2,6 @@
 
 const express = require('express');
 const dataModules = require('../models');
-const basicAuth = require('../auth/middleware/basic.js');
 const bearerAuth = require('../auth/middleware/bearer.js');
 const permissions = require('../auth/middleware/acl.js');
 
